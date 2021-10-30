@@ -6,7 +6,8 @@ const styles = {
   },
   wrapper: {
     height: "100%",
-    padding: "20px 84px"
+    padding: "20px 84px",
+    overflowX: "clip"
   }
 };
 

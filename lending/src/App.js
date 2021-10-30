@@ -1,11 +1,12 @@
 import MainWrapper from "./Components/MainWrapper";
 import Header from "./Components/Header";
+import GeneralBlock from "./Components/GeneralBlock";
 
 function App() {
   return (
     <MainWrapper>
       <Header />
-      <div />
+      <GeneralBlock />
     </MainWrapper>
   );
 }

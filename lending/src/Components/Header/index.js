@@ -2,6 +2,9 @@ import React from "react";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
 import LogoIcon from "../../Images/logo";
+import TriangleIcon from "../../Images/tirangle";
+import TryNowButton from "../TryNowButton";
+import LiveDemoButton from "../LiveDemoButton";
 
 const Header = ({ classes }) => {
   return (
@@ -16,8 +19,8 @@ const Header = ({ classes }) => {
         </div>
         <div className={classes.buttonWrapper}>
           <div className={classes.link}>Sign in</div>
-          <div className={classes.buttonLiveDemo}>Live demo</div>
-          <div className={classes.buttonTryNow}>Try now</div>
+          <LiveDemoButton />
+          <TryNowButton maxWidth={164} />
         </div>
       </div>
     </div>
