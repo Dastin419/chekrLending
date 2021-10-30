@@ -7,21 +7,19 @@ import Bg2Icon from "../../Images/bg-2";
 import icon from "../../Images/thermometr.png";
 import ThermometrIcon from "../../Images/thermometr";
 
-const SimpleBlock = ({ classes }) => {
+const SimpleBlock = ({ classes, reverse, title, text, icon, bgIcon }) => {
   return (
-    <div className={classes.wrapper}>
+    <div
+      className={classes.wrapper}
+      style={reverse ? { flexDirection: "row-reverse" } : {}}
+    >
       <div className={classes.iconWrapper}>
-        <Bg2Icon className={classes.bgIcon} />
-        <ThermometrIcon className={classes.icon} />
+        {icon}
+        {bgIcon}
       </div>
       <div className={classes.textBlock}>
-        <div className={classes.title}>
-          Reviews and scores an essay draft in seconds
-        </div>
-        <div className={classes.subTitle}>
-          On average, it will take no more than 10 seconds to fully check your
-          essay, after which you will see the full description
-        </div>
+        <div className={classes.title}>{title}</div>
+        <div className={classes.subTitle}>{text}</div>
       </div>
     </div>
   );

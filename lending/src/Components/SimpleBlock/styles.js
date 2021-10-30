@@ -1,13 +1,13 @@
 const styles = {
   wrapper: {
     display: "flex",
-    alignItems: "flex-start",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    marginBottom: 200,
+    alignItems: "center"
   },
   textBlock: {
     maxWidth: 567,
-    width: "100%",
-    paddingRight: 20
+    width: "100%"
   },
   title: {
     color: "#FFFFFF",
@@ -16,13 +16,14 @@ const styles = {
   },
   subTitle: {
     color: "#FFFFFF",
-    margin: "40px 0",
+    marginTop: 15,
     fontSize: 20,
     lineHeight: "155%",
     maxWidth: 600
   },
   iconWrapper: {
-    position: "relative"
+    position: "relative",
+    width: "min-content"
   },
   icon: {},
   bgIcon: {
