@@ -20,9 +20,12 @@ import ChipBlock from "../ChipBlock";
 import SubscribeBlock from "../SubscribeBlock";
 import AboutUsBlock from "../AboutUsBlock";
 
-const GeneralBlock = ({ classes }) => {
+const GeneralBlock = ({ classes, isOpen }) => {
   return (
-    <div className={classes.wrapper}>
+    <div
+      className={classes.wrapper}
+      style={isOpen ? { background: "rgba(0,0,0,0.5" } : {}}
+    >
       <BlockWithTitle />
       <SimpleBlock
         title="Reviews and scores an essay draft in seconds"

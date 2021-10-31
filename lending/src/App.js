@@ -1,20 +1,19 @@
+import { useState } from "react";
+
 import MainWrapper from "./Components/MainWrapper";
 import Header from "./Components/Header";
 import GeneralBlock from "./Components/GeneralBlock";
 import Footer from "./Components/Footer";
-import NavState from "./Nav/NavState";
-import MainMenu from "./Nav/MainMenu";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <NavState>
-      {/*<MainMenu />*/}
-      <MainWrapper>
-        <Header />
-        <GeneralBlock />
-        <Footer />
-      </MainWrapper>
-    </NavState>
+    <MainWrapper>
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <GeneralBlock isOpen={isOpen} />
+      <Footer isOpen={isOpen} />
+    </MainWrapper>
   );
 }
 

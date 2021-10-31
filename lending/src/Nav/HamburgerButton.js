@@ -1,16 +1,14 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { MenuContext } from "./NavState";
 
 const MenuButton = styled.button`
   display: block;
   transform-origin: 16px 11px;
   float: left;
-  margin-right: 29px;
   outline: 0;
   border: 0;
-  padding: 12px;
   background: none;
+  margin-top: 5px;
 
   span {
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -48,16 +46,14 @@ const Bar = styled.span`
   background-color: #fff;
 `;
 
-const HamburgerButton = () => {
-  const { isMenuOpen, toggleMenuMode } = useContext(MenuContext);
-
+const HamburgerButton = ({ isOpen, setIsOpen }) => {
   const clickHandler = () => {
-    toggleMenuMode();
+    setIsOpen(!isOpen);
   };
 
   return (
     <MenuButton
-      className={isMenuOpen ? "active" : ""}
+      className={isOpen ? "active" : ""}
       aria-label="Открыть главное меню"
       onClick={clickHandler}
     >

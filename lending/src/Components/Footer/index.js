@@ -7,9 +7,12 @@ import FacebookIcon from "../../Images/facebook";
 import TwitterIcon from "../../Images/twiter";
 import LinkendinIcon from "../../Images/linkendin";
 
-const Footer = ({ classes }) => {
+const Footer = ({ classes, isOpen }) => {
   return (
-    <div className={classes.wrapper}>
+    <div
+      style={isOpen ? { background: "rgba(0,0,0,0.5" } : {}}
+      className={classes.wrapper}
+    >
       <div className={classes.border} />
       <div className={classes.thirdWrap}>
         <div>

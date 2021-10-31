@@ -30,7 +30,7 @@ const styles = {
     "@media (max-width: 1000px)": {
       marginLeft: 30
     },
-    "@media (max-width: 900px)": {
+    "@media (max-width: 565px)": {
       display: "none"
     }
   },
@@ -41,9 +41,41 @@ const styles = {
     whiteSpace: "nowrap"
   },
   burgerMenu: {
-    "@media (min-width: 900px)": {
+    "@media (min-width: 565px)": {
       display: "none"
     }
+  },
+  wrapperOptions: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "space-around",
+    color: "#FFFFFF"
+  },
+  button: {
+    "@media (max-width: 900px)": {
+      display: "none"
+    }
+  },
+  accordion: {
+    "@media (min-width: 565px)": {
+      display: "none"
+    },
+    "& div": {},
+    "& .MuiPaper-root": {},
+    "& .MuiPaper-elevation1": {
+      position: "initial"
+    },
+    "& .MuiAccordionSummary-root": {
+      display: "none"
+    }
+  },
+  linkM: {
+    whiteSpace: "nowrap",
+    lineHeight: "125%",
+    color: "#FFFFFF",
+    fontWeight: 700,
+    fontSize: 24,
+    marginBottom: 20
   }
 };
 
