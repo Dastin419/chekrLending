@@ -1,12 +1,12 @@
 import React from "react";
+import classNames from "classnames";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
 
 const SimpleBlock = ({ classes, reverse, title, text, icon, bgIcon }) => {
   return (
     <div
-      className={classes.wrapper}
-      style={reverse ? { flexDirection: "row-reverse" } : {}}
+      className={classNames(classes.wrapper, { [classes.rowReverse]: reverse })}
     >
       <div className={classes.iconWrapper}>
         {icon}

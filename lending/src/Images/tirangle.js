@@ -2,7 +2,7 @@ import React from "react";
 
 const TriangleIcon = props => {
   const fill = props.fill ? props.fill : "white";
-  console.log({ fill });
+
   return (
     <svg
       {...props}

@@ -15,11 +15,16 @@ const BlockWithTitle = ({ classes }) => {
           Empowers to tell a better structured and coherent story to admissions.
           Stays objective and consistent, replacing human readers.
         </div>
-        <Button color="purple" filled={true} label="Try now" />
+        <div className={classes.buttonDesk}>
+          <Button color="purple" filled={true} label="Try now" />
+        </div>
       </div>
       <div className={classes.iconWrapper}>
         <Bg1Icon className={classes.bgIcon} />
         <MainScreenIcon className={classes.icon} />
+      </div>
+      <div className={classes.buttonMob}>
+        <Button color="purple" filled={true} label="Try now" />
       </div>
     </div>
   );
