@@ -50,7 +50,17 @@ const styles = {
   imgWrapper: {
     display: "flex",
     justifyContent: "space-between",
-    width: 595
+    width: 595,
+    "@media (max-width: 1000px)": {
+      // flexDirection: "column",
+      // alignItems: "center"
+      width: 495,
+      flexWrap: "wrap",
+      justifyContent: "center",
+      "@media (max-width: 800px)": {
+        width: 395
+      }
+    }
   },
   img: {
     width: 184,
@@ -96,6 +106,9 @@ const styles = {
     color: "#414141",
     marginLeft: 10,
     borderBottom: "1px solid #414141"
+  },
+  itemWrap: {
+    margin: "10px 10px"
   }
 };
 

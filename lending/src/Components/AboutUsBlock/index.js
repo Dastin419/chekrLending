@@ -29,7 +29,7 @@ const personItems = [
 
 const PersonItem = ({ classes, name, job, img }) => {
   return (
-    <div>
+    <div className={classes.itemWrap}>
       <img className={classes.img} alt="" src={img} />
       <div className={classes.name}>{name}</div>
       <div className={classes.job}>{job}</div>
