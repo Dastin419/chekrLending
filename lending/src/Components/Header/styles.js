@@ -7,6 +7,9 @@ const styles = {
     },
     "@media (max-width: 1000px)": {
       padding: "20px 20px"
+    },
+    "@media (max-width: 900px)": {
+      justifyContent: "space-between"
     }
   },
   textWrapper: {
@@ -26,6 +29,9 @@ const styles = {
     width: "100%",
     "@media (max-width: 1000px)": {
       marginLeft: 30
+    },
+    "@media (max-width: 900px)": {
+      display: "none"
     }
   },
   link: {
@@ -33,6 +39,11 @@ const styles = {
     fontSize: 18,
     color: "#FFFFFF",
     whiteSpace: "nowrap"
+  },
+  burgerMenu: {
+    "@media (min-width: 900px)": {
+      display: "none"
+    }
   }
 };
 

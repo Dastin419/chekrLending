@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
 import LogoIcon from "../../Images/logo";
 import Button from "../Button";
+import HamburgerButton from "../../Nav/HamburgerButton";
+import { SideMenu } from "../../Nav/SideMenu";
+import { MenuContext } from "../../Nav/NavState";
+import { useOnClickOutside } from "../../Nav/utils";
 
 const Header = ({ classes }) => {
+  const node = useRef();
+  const { isMenuOpen, toggleMenuMode } = useContext(MenuContext);
+  useOnClickOutside(node, () => {
+    // Only if menu is open
+    if (isMenuOpen) {
+      toggleMenuMode();
+    }
+  });
   return (
-    <div className={classes.wrapper}>
+    <div ref={node} className={classes.wrapper}>
       <div>
         <LogoIcon />
+      </div>
+      <div className={classes.burgerMenu}>
+        <HamburgerButton />
+        <SideMenu />
       </div>
       <div className={classes.secondWrap}>
         <div className={classes.textWrapper}>
