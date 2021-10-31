@@ -1,9 +1,9 @@
 import React from "react";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
-import TryNowButton from "../TryNowButton";
 import MainScreenIcon from "../../Images/mainScreenIcon";
 import Bg1Icon from "../../Images/bg-1";
+import Button from "../Button";
 
 const BlockWithTitle = ({ classes }) => {
   return (
@@ -15,7 +15,7 @@ const BlockWithTitle = ({ classes }) => {
           Empowers to tell a better structured and coherent story to admissions.
           Stays objective and consistent, replacing human readers.
         </div>
-        <TryNowButton maxWidth={120} />
+        <Button color="purple" filled={true} label="Try now" />
       </div>
       <div className={classes.iconWrapper}>
         <Bg1Icon className={classes.bgIcon} />

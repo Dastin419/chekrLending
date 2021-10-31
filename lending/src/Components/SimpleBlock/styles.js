@@ -3,7 +3,8 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     marginBottom: 200,
-    alignItems: "center"
+    alignItems: "center",
+    padding: "0 84px"
   },
   textBlock: {
     maxWidth: 567,
@@ -19,7 +20,7 @@ const styles = {
     marginTop: 15,
     fontSize: 20,
     lineHeight: "155%",
-    maxWidth: 600
+    maxWidth: 440
   },
   iconWrapper: {
     position: "relative",

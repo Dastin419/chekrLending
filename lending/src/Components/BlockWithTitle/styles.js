@@ -3,7 +3,8 @@ const styles = {
     display: "flex",
     marginTop: 120,
     alignItems: "flex-start",
-    marginBottom: 260
+    marginBottom: 260,
+    padding: "0 84px"
   },
   textBlock: {
     maxWidth: 712,

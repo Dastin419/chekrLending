@@ -1,6 +1,7 @@
 import React from "react";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
+
 import BlockWithTitle from "../BlockWithTitle";
 import SimpleBlock from "../SimpleBlock";
 import ThermometerIcon from "../../Images/thermometr";
@@ -15,6 +16,9 @@ import SummaryIcon from "../../Images/summaryIcon";
 import Bg6Icon from "../../Images/bg-6";
 import FeedbackIcon from "../../Images/feedbackIcon";
 import Bg7Icon from "../../Images/bg-7";
+import ChipBlock from "../ChipBlock";
+import SubscribeBlock from "../SubscribeBlock";
+import AboutUsBlock from "../AboutUsBlock";
 
 const GeneralBlock = ({ classes }) => {
   return (
@@ -46,14 +50,7 @@ const GeneralBlock = ({ classes }) => {
         bgIcon={<Bg7Icon className={classes.bg6} />}
         reverse={true}
       />
-      <div
-        style={{
-          background: "white",
-          height: 100,
-          width: "100%",
-          margin: "150px 0"
-        }}
-      />
+      <ChipBlock />
       <SimpleBlock
         title="Allows live editing and instant feedback on changes"
         text="You can at any time make changes to your essay right in the program and check how your score has changed"
@@ -67,6 +64,8 @@ const GeneralBlock = ({ classes }) => {
         icon={<SummaryIcon />}
         bgIcon={<Bg6Icon className={classes.bg5} />}
       />
+      <SubscribeBlock />
+      <AboutUsBlock />
     </div>
   );
 };

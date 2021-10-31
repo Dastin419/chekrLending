@@ -1,6 +1,7 @@
 const styles = {
   wrapper: {
-    display: "flex"
+    display: "flex",
+    padding: "20px 84px"
   },
   textWrapper: {
     display: "flex",
