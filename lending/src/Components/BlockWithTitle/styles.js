@@ -4,12 +4,18 @@ const styles = {
     marginTop: 120,
     alignItems: "flex-start",
     marginBottom: 260,
-    padding: "0 84px"
+    padding: "0 84px",
+    "@media (max-width: 1100px)": {
+      padding: "0 40px"
+    },
+    "@media (max-width: 1000px)": {
+      padding: "020px"
+    }
   },
   textBlock: {
     maxWidth: 712,
     width: "100%",
-    paddingRight: 20
+    paddingRight: 65
   },
   title: {
     color: "#FFFFFF",
@@ -24,7 +30,9 @@ const styles = {
     maxWidth: 600
   },
   iconWrapper: {
-    position: "relative"
+    position: "relative",
+    marginRight: -150,
+    marginLeft: -10
   },
   icon: {
     position: "absolute",

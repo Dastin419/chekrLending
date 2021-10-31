@@ -5,7 +5,13 @@ const styles = {
     padding: "50px 84px 68px",
     background: "#FFFFFF",
     flexDirection: "column",
-    marginBottom: 200
+    marginBottom: 200,
+    "@media (max-width: 1100px)": {
+      padding: "40px 40px 50px"
+    },
+    "@media (max-width: 1000px)": {
+      padding: "30px 20px 40px"
+    }
   },
   preTitle: {
     textTransform: "uppercase",

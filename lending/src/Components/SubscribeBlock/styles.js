@@ -4,7 +4,13 @@ const styles = {
     alignItems: "center",
     padding: "50px 84px 68px",
     background: "#FFFFFF",
-    flexDirection: "column"
+    flexDirection: "column",
+    "@media (max-width: 1100px)": {
+      padding: "40px 40px 50px"
+    },
+    "@media (max-width: 1000px)": {
+      padding: "30px 20px 40px"
+    }
   },
   title: {
     fontWeight: 800,

@@ -7,7 +7,9 @@ import Button from "../Button";
 const Header = ({ classes }) => {
   return (
     <div className={classes.wrapper}>
-      <LogoIcon />
+      <div>
+        <LogoIcon />
+      </div>
       <div className={classes.secondWrap}>
         <div className={classes.textWrapper}>
           <div className={classes.link}>About</div>

@@ -4,7 +4,13 @@ const styles = {
     justifyContent: "space-between",
     marginBottom: 200,
     alignItems: "center",
-    padding: "0 84px"
+    padding: "0 84px",
+    "@media (max-width: 1100px)": {
+      padding: "0 40px"
+    },
+    "@media (max-width: 1000px)": {
+      padding: "0 20px"
+    }
   },
   textBlock: {
     maxWidth: 567,

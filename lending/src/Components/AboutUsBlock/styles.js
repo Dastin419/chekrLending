@@ -3,7 +3,13 @@ const styles = {
     display: "flex",
     alignItems: "center",
     padding: "50px 84px 20px",
-    flexDirection: "column"
+    flexDirection: "column",
+    "@media (max-width: 1100px)": {
+      padding: "40px 40px 20px"
+    },
+    "@media (max-width: 1000px)": {
+      padding: "30px 20px 20px"
+    }
   },
   subWrapper: {
     display: "flex",
@@ -28,7 +34,8 @@ const styles = {
     marginBottom: 30
   },
   textBlock: {
-    maxWidth: 495
+    maxWidth: 495,
+    paddingLeft: 40
   },
   text: {
     color: "#575757",
@@ -65,7 +72,7 @@ const styles = {
     alignItems: "center",
     width: "100%",
     justifyContent: "space-around",
-    borderBottom: "1px solid rgba(36, 137, 245, 0.2)",
+    // borderBottom: "1px solid rgba(36, 137, 245, 0.2)",
     paddingBottom: 97
   },
   rightBlock: {
