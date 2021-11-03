@@ -11,6 +11,12 @@ const styles = {
     },
     "@media (max-width: 1000px)": {
       padding: "30px 20px 40px"
+    },
+    "@media (max-width: 800px)": {
+      marginBottom: 50
+    },
+    "@media (max-width: 560px)": {
+      padding: "15px 15px 30px"
     }
   },
   preTitle: {
@@ -18,7 +24,12 @@ const styles = {
     color: "rgba(142, 142, 142, 0.62)",
     fontWeight: 500,
     fontSize: 14,
-    marginBottom: 15
+    marginBottom: 15,
+    "@media (max-width: 560px)": {
+      textAlign: "left",
+      alignSelf: "flex-start",
+      fontSize: 12
+    }
   },
   title: {
     fontWeight: 800,
@@ -26,7 +37,12 @@ const styles = {
     color: "#414141",
     maxWidth: 900,
     textAlign: "center",
-    marginBottom: 20
+    marginBottom: 20,
+    "@media (max-width: 560px)": {
+      textAlign: "left",
+      alignSelf: "flex-start",
+      fontSize: 24
+    }
   },
   blue: {
     color: "#2489F5"
@@ -36,15 +52,31 @@ const styles = {
     color: "#575757",
     marginBottom: 50,
     maxWidth: 550,
-    textAlign: "center"
+    textAlign: "center",
+    "@media (max-width: 560px)": {
+      textAlign: "left",
+      alignSelf: "flex-start",
+      fontSize: 16
+    }
   },
   icon: {
-    marginBottom: 70
+    marginBottom: 70,
+    "@media (max-width: 560px)": {
+      marginBottom: 30
+    }
   },
   buttonsWrap: {
     display: "flex",
     width: "100%",
-    maxWidth: 420
+    maxWidth: "100%",
+    alignSelf: "center",
+    justifyContent: "center",
+    "@media (max-width: 560px)": {
+      flexDirection: "column",
+      "& div:first-child": {
+        marginBottom: 10
+      }
+    }
   }
 };
 

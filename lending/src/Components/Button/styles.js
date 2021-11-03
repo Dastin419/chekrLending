@@ -10,7 +10,11 @@ const styles = {
     display: "flex",
     maxHeight: 42,
     justifyContent: "center",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    "@media (max-width: 560px)": {
+      width: "100%",
+      minWidth: "100%"
+    }
   }
 };
 

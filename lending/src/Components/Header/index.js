@@ -52,7 +52,7 @@ const Header = ({ classes, isOpen, setIsOpen }) => {
           aria-controls="panel1d-content"
           id="panel1d-header"
         />
-        <AccordionDetails>
+        <AccordionDetails style={{ background: "#2489F5" }}>
           <div className={classes.linkM}>Log in</div>
           <div className={classes.linkM}>About</div>
           <div className={classes.linkM}>User`s stories</div>

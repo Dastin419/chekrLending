@@ -31,8 +31,10 @@ const PersonItem = ({ classes, name, job, img }) => {
   return (
     <div className={classes.itemWrap}>
       <img className={classes.img} alt="" src={img} />
-      <div className={classes.name}>{name}</div>
-      <div className={classes.job}>{job}</div>
+      <div className={classes.descriptionWrap}>
+        <div className={classes.name}>{name}</div>
+        <div className={classes.job}>{job}</div>
+      </div>
     </div>
   );
 };
@@ -81,7 +83,7 @@ const AboutUsBlock = ({ classes }) => {
           <div className={classes.leftBlockTitle}>
             We`re here to help{" "}
             <div style={{ marginLeft: 20 }}>
-              <div className={classes.line} />
+              <div className={classes.lineBottom} />
             </div>
           </div>
           <div className={classes.leftBlockSubtitle}>

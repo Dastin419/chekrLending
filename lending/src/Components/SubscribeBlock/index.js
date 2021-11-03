@@ -4,13 +4,14 @@ import { styles } from "./styles";
 import ChipIcon from "../../Images/chipIcon";
 import Button from "../Button";
 import PeopleIcon from "../../Images/peopleIcon";
+import PeopleIconMobil from "../../Images/peopleIconMobile";
 
 const SubscribeBlock = ({ classes }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.title}>
         <span className={classes.blue}>Subscribe</span> for just $9.99 per month
-        <br />
+        <br className={classes.br} />
         or $4.99 only by invite 5 friends
       </div>
       <div className={classes.text}>
@@ -22,6 +23,11 @@ const SubscribeBlock = ({ classes }) => {
         <Button color="blue" label="Invite" />
       </div>
       <PeopleIcon className={classes.icon} />
+      <PeopleIconMobil className={classes.iconMobil} />
+      <div className={classes.textMobil}>
+        The number of students who thanked us for helping them successfully go
+        to a higher education institution
+      </div>
     </div>
   );
 };

@@ -7,13 +7,20 @@ const styles = {
       padding: "0 40px 30px"
     },
     "@media (max-width: 1000px)": {
-      padding: "0 20px 20px"
+      padding: "0 20px 40px"
+    },
+    "@media (max-width: 560px)": {
+      padding: "0 20px 40px"
     }
   },
   textWrapper: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    "@media (max-width: 560px)": {
+      alignSelf: "center",
+      order: 0
+    }
   },
   secondWrap: {
     marginLeft: 74,
@@ -22,30 +29,55 @@ const styles = {
     width: "100%",
     "@media (max-width: 1000px)": {
       marginLeft: 30
+    },
+    "@media (max-width: 800px)": {
+      marginLeft: 15
     }
   },
   link: {
     marginRight: 20,
     fontSize: 18,
     color: "#414141",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
+    "@media (max-width: 800px)": {
+      marginRight: 20
+    },
+    "@media (max-width: 600px)": {
+      marginRight: 15
+    }
   },
   rightBlock: {
-    position: "relative",
     minWidth: 92,
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    flexDirection: "column",
+    paddingTop: 30,
+    "@media (max-width: 560px)": {
+      order: 3,
+      paddingTop: 0
+    }
   },
   socialWrap: {
     display: "flex",
     justifyContent: "space-between",
-    width: "100%"
+    width: "100%",
+    maxWidth: 92,
+    "@media (max-width: 560px)": {
+      // order: 3,
+      maxWidth: 180,
+      "& svg": {
+        width: 40,
+        height: 40
+      }
+    }
   },
   subTitle: {
-    position: "absolute",
     color: "#95A1BB",
     fontSize: 14,
-    bottom: -15
+    marginTop: 10,
+    "@media (max-width: 560px)": {
+      fontSize: 20
+    }
   },
   border: {
     borderTop: "1px solid rgba(36, 137, 245, 0.2)",
@@ -53,7 +85,18 @@ const styles = {
     marginBottom: 20
   },
   thirdWrap: {
-    display: "flex"
+    display: "flex",
+    justifyContent: "space-between",
+    "@media (max-width: 560px)": {
+      flexDirection: "column"
+    }
+  },
+  logo: {
+    alignSelf: "center",
+    "@media (max-width: 560px)": {
+      order: 1,
+      margin: "20px 0"
+    }
   }
 };
 

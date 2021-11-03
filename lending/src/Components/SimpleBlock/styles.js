@@ -16,6 +16,10 @@ const styles = {
     "@media (max-width: 900px)": {
       flexDirection: "column-reverse !important",
       marginBottom: 60
+    },
+    "@media (max-width: 560px)": {
+      padding: "0 15px",
+      marginBottom: 30
     }
   },
   rowReverse: { flexDirection: "row-reverse" },
@@ -25,12 +29,23 @@ const styles = {
     "@media (max-width: 900px)": {
       maxWidth: "100%",
       marginBottom: 100
+    },
+    "@media (max-width: 800px)": {
+      maxWidth: "100%",
+      marginBottom: 50
+    },
+    "@media (max-width: 560px)": {
+      maxWidth: "100%",
+      marginBottom: 25
     }
   },
   title: {
     color: "#FFFFFF",
     fontWeight: 800,
-    fontSize: 40
+    fontSize: 40,
+    "@media (max-width: 560px)": {
+      fontSize: 24
+    }
   },
   subTitle: {
     color: "#FFFFFF",
@@ -40,11 +55,26 @@ const styles = {
     maxWidth: 440,
     "@media (max-width: 900px)": {
       maxWidth: "100%"
+    },
+    "@media (max-width: 560px)": {
+      fontSize: 18
     }
   },
   iconWrapper: {
     position: "relative",
-    width: "min-content"
+    // width: "min-content",
+    width: "100%",
+    "& svg": {
+      width: "100% !important"
+    },
+    "@media (max-width: 460px)": {
+      marginTop: -50,
+      marginBottom: -25
+    },
+    "@media (max-width: 400px)": {
+      marginTop: -30,
+      marginBottom: -35
+    }
   },
   icon: {},
   bgIcon: {

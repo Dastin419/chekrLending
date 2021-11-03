@@ -10,6 +10,9 @@ const styles = {
     },
     "@media (max-width: 900px)": {
       justifyContent: "space-between"
+    },
+    "@media (max-width: 560px)": {
+      padding: 15
     }
   },
   textWrapper: {

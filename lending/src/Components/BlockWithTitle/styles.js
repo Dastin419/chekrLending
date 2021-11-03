@@ -19,6 +19,9 @@ const styles = {
       display: "flex",
       flexDirection: "column",
       marginBottom: 60
+    },
+    "@media (max-width: 560px)": {
+      padding: 15
     }
   },
   textBlock: {
@@ -33,7 +36,10 @@ const styles = {
   title: {
     color: "#FFFFFF",
     fontWeight: 800,
-    fontSize: 60
+    fontSize: 60,
+    "@media (max-width: 560px)": {
+      fontSize: 36
+    }
   },
   subTitle: {
     color: "#FFFFFF",
@@ -43,6 +49,10 @@ const styles = {
     maxWidth: 600,
     "@media (max-width: 900px)": {
       maxWidth: "100%"
+    },
+    "@media (max-width: 560px)": {
+      fontSize: 18,
+      margin: "10px 0"
     }
   },
   iconWrapper: {
@@ -53,17 +63,34 @@ const styles = {
       marginRight: 0,
       marginLeft: 0,
       alignSelf: "center"
+    },
+    "@media (max-width: 460px)": {
+      marginTop: -50,
+      marginBottom: -50
+    },
+    "@media (max-width: 400px)": {
+      marginTop: -90,
+      marginBottom: -90
+    },
+    "& svg": {
+      width: "100%"
     }
   },
   icon: {
     position: "absolute",
     top: 0,
-    left: 30
+    left: 30,
+    "& svg": {
+      width: "100%"
+    }
   },
   bgIcon: {
     position: "absolute",
     top: 100,
-    left: -30
+    left: -30,
+    "@media (max-width: 560px)": {
+      top: -20
+    }
   },
   buttonDesk: {
     "@media (max-width: 900px)": {
@@ -78,6 +105,9 @@ const styles = {
         maxWidth: "100%",
         width: "100%"
       }
+    },
+    "@media (max-width: 560px)": {
+      width: "100%"
     }
   }
 };
