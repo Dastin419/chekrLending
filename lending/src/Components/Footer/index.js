@@ -1,5 +1,6 @@
 import React from "react";
 import injectStyles from "react-jss";
+import classNames from "classnames";
 import { styles } from "./styles";
 import LogoIcon from "../../Images/logo";
 import Button from "../Button";
@@ -11,7 +12,7 @@ const Footer = ({ classes, isOpen }) => {
   return (
     <div
       style={isOpen ? { background: "rgba(0,0,0,0.5" } : {}}
-      className={classes.wrapper}
+      className={classNames(classes.wrapper)}
     >
       <div className={classes.border} />
       <div className={classes.thirdWrap}>
@@ -19,9 +20,9 @@ const Footer = ({ classes, isOpen }) => {
           <LogoIcon fill="#2489F5" />
         </div>
         <div className={classes.textWrapper}>
-          <div className={classes.link}>About</div>
-          <div className={classes.link}>User's stories</div>
-          <div className={classes.link}>Updates</div>
+          <div className={classNames(classes.link, {})}>About</div>
+          <div className={classNames(classes.link, {})}>User's stories</div>
+          <div className={classNames(classes.link, {})}>Updates</div>
           <div />
         </div>
         <div className={classes.rightBlock}>
@@ -30,7 +31,7 @@ const Footer = ({ classes, isOpen }) => {
             <TwitterIcon />
             <LinkendinIcon />
           </div>
-          <div className={classes.subTitle}>© Chckr 2021</div>
+          <div className={classNames(classes.subTitle, {})}>© Chckr 2021</div>
         </div>
       </div>
     </div>

@@ -79,6 +79,11 @@ const styles = {
     fontWeight: 700,
     fontSize: 24,
     marginBottom: 20
+  },
+  wrapperProfile: {
+    background: "#FFFFFF",
+    boxShadow:
+      " 0px 2px 4px rgba(117, 131, 142, 0.04), 0px 3px 7px rgba(195, 202, 209, 0.05)"
   }
 };
 

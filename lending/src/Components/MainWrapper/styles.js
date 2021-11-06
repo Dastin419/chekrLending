@@ -7,6 +7,9 @@ const styles = {
   wrapper: {
     height: "100%",
     overflowX: "clip"
+  },
+  mainWrapperProfile: {
+    background: "#FFFFFF"
   }
 };
 
