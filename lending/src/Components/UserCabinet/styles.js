@@ -100,6 +100,30 @@ const styles = {
   cardTitle: {
     color: "#333333",
     fontSize: 18
+  },
+  simpleText: {
+    color: "#333333",
+    fontSize: 18,
+    marginBottom: 5
+  },
+  link: {
+    color: "#2489F5",
+    fontSize: 12,
+    marginBottom: 5,
+    display: "block"
+  },
+  subtitle: {
+    color: "#333333",
+    fontSize: 18,
+    fontWeight: 700,
+    marginTop: 50,
+    marginBottom: 10
+  },
+  wrapperPayment: {
+    display: "flex"
+  },
+  datePaid: {
+    marginLeft: 84
   }
 };
 

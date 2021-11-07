@@ -19,7 +19,11 @@ const App = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isProfile, setIsProfile] = useState(true);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (isProfile) {
+      history.push(PATH.profile);
+    }
+  }, [isProfile]);
 
   console.log({ isProfile });
 

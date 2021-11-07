@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { PATH } from "../../App";
 import PlusIcon from "../../Images/plus";
 import StickyHeadTable from "../Table";
+import MyEssayTab from "./MyEssayTab";
+import SubscribeTab from "./SubscribeTab";
 
 const TABS = {
   REVIEW_MY_ESSAY: { id: "REVIEW_MY_ESSAY", text: "Review my essay" },
@@ -16,9 +18,7 @@ const TABS = {
   PROFILE: { id: "PROFILE", text: "Profile" }
 };
 
-const sliceText = str => `${str.substring(0, 113)}...`;
-
-const columns = [
+const columnsMyEssayTab = [
   { id: "date", label: "Date" },
   { id: "time", label: "Time" },
   {
@@ -28,7 +28,18 @@ const columns = [
   }
 ];
 
-const rows = [
+const columnsSubscribeTab = [
+  { id: "date", label: "Date" },
+  { id: "time", label: "Time" },
+  { id: "amount", label: "Amount" },
+  {
+    id: "method",
+    label: "Method",
+    align: "right"
+  }
+];
+
+const rowsMyEssayTab = [
   { date: "22.22.2021", time: "11:00", overallScore: 12 },
   { date: "17.22.2021", time: "19:00", overallScore: 84 },
   { date: "17.22.2021", time: "13:00", overallScore: 44 },
@@ -41,6 +52,21 @@ const rows = [
   { date: "09.22.2021", time: "10:00", overallScore: 53 }
 ];
 
+const rowsSubscribeTab = [
+  {
+    date: "22.22.2021",
+    time: "11:00",
+    amount: "$9.99",
+    method: "Credit card 1533 •••• •••• 2558 "
+  },
+  {
+    date: "17.22.2021",
+    time: "19:00",
+    amount: "$9.99",
+    method: "Credit card 1533 •••• •••• 2558"
+  }
+];
+
 const UserCabinet = ({ classes, setIsProfile }) => {
   const [currentTab, setCurrentTab] = useState(TABS.MY_ESSAY.id);
 
@@ -48,27 +74,19 @@ const UserCabinet = ({ classes, setIsProfile }) => {
     switch (tab) {
       case TABS.MY_ESSAY.id:
         return (
-          <div className={classes.content}>
-            <div className={classes.wrapperCard}>
-              <div className={classes.card}>
-                <div className={classes.emptyCard}>
-                  <PlusIcon />
-                  <div className={classes.cardTitle}>New essay</div>
-                </div>
-              </div>
-              <div className={classes.card}>
-                {sliceText(
-                  "When I was very little, I caught the travel bug. It staarted after my grandparents first brought me to their home"
-                )}
-              </div>
-              <div className={classes.card}>
-                {sliceText(
-                  "It began with French, which taught me the importance of pronunciation. I remember once asking a store owner in Paris"
-                )}
-              </div>
-            </div>
-            <StickyHeadTable columns={columns} rows={rows} />
-          </div>
+          <MyEssayTab
+            classes={classes}
+            columns={columnsMyEssayTab}
+            rows={rowsMyEssayTab}
+          />
+        );
+      case TABS.SUBSCRIBE.id:
+        return (
+          <SubscribeTab
+            clasess={classes}
+            rows={rowsSubscribeTab}
+            columns={columnsSubscribeTab}
+          />
         );
 
       default: {
@@ -80,10 +98,8 @@ const UserCabinet = ({ classes, setIsProfile }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.leftBlock}>
-        <div className={classes.title}>
-          {TABS[currentTab].text}
-          {getContent(currentTab)}
-        </div>
+        <div className={classes.title}>{TABS[currentTab].text}</div>
+        {getContent(currentTab)}
       </div>
       <div className={classes.rightBlock}>
         <div className={classes.tabBlock}>
