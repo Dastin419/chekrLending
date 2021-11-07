@@ -124,6 +124,23 @@ const styles = {
   },
   datePaid: {
     marginLeft: 84
+  },
+  buttonWrap: {
+    display: "flex"
+  },
+  subWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    maxWidth: 610
+  },
+  checkBoxWrap: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end"
+  },
+  checkBoxLabel: {
+    marginBottom: 10,
+    color: "#333333"
   }
 };
 

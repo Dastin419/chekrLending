@@ -10,6 +10,7 @@ import PlusIcon from "../../Images/plus";
 import StickyHeadTable from "../Table";
 import MyEssayTab from "./MyEssayTab";
 import SubscribeTab from "./SubscribeTab";
+import ProfileTab from "./ProfileTab";
 
 const TABS = {
   REVIEW_MY_ESSAY: { id: "REVIEW_MY_ESSAY", text: "Review my essay" },
@@ -88,7 +89,8 @@ const UserCabinet = ({ classes, setIsProfile }) => {
             columns={columnsSubscribeTab}
           />
         );
-
+      case TABS.PROFILE.id:
+        return <ProfileTab classes={classes} />;
       default: {
         return <div>{tab}</div>;
       }

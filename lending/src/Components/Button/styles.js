@@ -1,5 +1,6 @@
 const styles = {
   buttonLiveDemo: {
+    cursor: "pointer",
     padding: "9px 30px",
     borderRadius: 5,
     width: "100%",
@@ -15,7 +16,12 @@ const styles = {
       width: "100%",
       minWidth: "100%"
     }
-  }
+  },
+  label: {
+    fontWeight: 700,
+    fontSize: 16
+  },
+  disabled: {}
 };
 
 export { styles };

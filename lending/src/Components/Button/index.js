@@ -1,10 +1,19 @@
 import React from "react";
 import injectStyles from "react-jss";
 import { styles } from "./styles";
-import LogoIcon from "../../Images/logo";
+import classNames from "classnames";
 import TriangleIcon from "../../Images/tirangle";
 
-const Button = ({ classes, color, filled, icon = false, label, margin }) => {
+const Button = ({
+  classes,
+  color,
+  filled,
+  icon = false,
+  label,
+  margin,
+  onClick,
+  disabled
+}) => {
   const style =
     color === "white"
       ? {
@@ -30,15 +39,24 @@ const Button = ({ classes, color, filled, icon = false, label, margin }) => {
       : {};
 
   return (
-    <div style={style} className={classes.buttonLiveDemo}>
+    <button
+      style={style}
+      className={classNames(classes.buttonLiveDemo, {
+        [classes.white]: color === "white",
+        [classes.purple]: color === "purple",
+        [classes.blue]: color === "blue",
+        [classes.disabled]: disabled
+      })}
+      onClick={disabled ? () => {} : onClick}
+    >
       {icon ? (
         <TriangleIcon
           fill={color === "white" ? "#FFFFFF" : "#2489F5"}
           style={{ margin: "2px 5px 0 0" }}
         />
       ) : null}
-      <div>{label}</div>
-    </div>
+      <div className={classes.label}>{label}</div>
+    </button>
   );
 };
 
