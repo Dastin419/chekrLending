@@ -18,7 +18,6 @@ const ProfileTab = ({ classes }) => {
   const [isEditMode, setIsEditMode] = useState(false);
 
   const handleChange = prop => event => {
-    console.log({ prop, event });
     setValues({ ...values, [prop]: event.target.value });
   };
 
