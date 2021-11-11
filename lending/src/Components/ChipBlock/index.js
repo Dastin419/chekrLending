@@ -20,8 +20,13 @@ const ChipBlock = ({ classes }) => {
       <ChipIcon className={classes.icon} />
 
       <div className={classes.buttonsWrap}>
-        <Button color="blue" label="Live demo" icon={true} margin={10} />
-        <Button color="blue" filled={true} label="Try now" />
+        <Button
+          color="blueOutlined"
+          label="Live demo"
+          icon={true}
+          margin={10}
+        />
+        <Button color="blue" label="Try now" />
       </div>
     </div>
   );

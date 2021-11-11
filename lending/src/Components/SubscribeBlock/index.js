@@ -19,7 +19,7 @@ const SubscribeBlock = ({ classes }) => {
         likelihood of successfully writing an essay by yourself
       </div>
       <div className={classes.buttonsWrap}>
-        <Button color="blue" label="Subscribe" filled={true} margin={10} />
+        <Button color="blueOutlined" label="Subscribe" margin={10} />
         <Button color="blue" label="Invite" />
       </div>
       <PeopleIcon className={classes.icon} />

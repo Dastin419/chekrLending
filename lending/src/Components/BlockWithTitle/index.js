@@ -16,7 +16,7 @@ const BlockWithTitle = ({ classes }) => {
           Stays objective and consistent, replacing human readers.
         </div>
         <div className={classes.buttonDesk}>
-          <Button color="purple" filled={true} label="Try now" />
+          <Button color="purple" label="Try now" />
         </div>
       </div>
       <div className={classes.iconWrapper}>
@@ -24,7 +24,7 @@ const BlockWithTitle = ({ classes }) => {
         <MainScreenIcon className={classes.icon} />
       </div>
       <div className={classes.buttonMob}>
-        <Button color="purple" filled={true} label="Try now" />
+        <Button color="purple" label="Try now" />
       </div>
     </div>
   );

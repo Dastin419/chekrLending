@@ -69,7 +69,7 @@ const styles = {
     justifyContent: "center",
     "@media (max-width: 560px)": {
       flexDirection: "column",
-      "& div:first-child": {
+      "& button:first-child": {
         marginBottom: 10
       }
     }

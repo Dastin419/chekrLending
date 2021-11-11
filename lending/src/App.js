@@ -36,7 +36,7 @@ const App = () => {
 
   const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
   const [isOpenModalCreateAccount, setIsOpenModalCreateAccount] = useState(
-    true
+    false
   );
 
   useEffect(() => {

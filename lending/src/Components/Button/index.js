@@ -7,42 +7,18 @@ import TriangleIcon from "../../Images/tirangle";
 const Button = ({
   classes,
   color,
-  filled,
   icon = false,
   label,
   margin,
   onClick,
   disabled
 }) => {
-  const style =
-    color === "white"
-      ? {
-          color: "#FFFFFF",
-          border: "2px solid #FFFFFF",
-          background: filled ? "#FFFFFF" : "initial",
-          marginRight: margin ? margin : 0
-        }
-      : color === "purple"
-      ? {
-          background: filled ? "#AF52DE" : "initial",
-          color: "#FFFFFF",
-          border: " 2px solid #AF52DE",
-          marginRight: margin ? margin : 0
-        }
-      : color === "blue"
-      ? {
-          color: filled ? "#FFFFFF" : "#2489F5",
-          border: "2px solid #2489F5",
-          background: filled ? "#2489F5" : "initial",
-          marginRight: margin ? margin : 0
-        }
-      : {};
-
   return (
     <button
-      style={style}
+      style={{ marginRight: margin ? margin : 0 }}
       className={classNames(classes.buttonLiveDemo, {
-        [classes.white]: color === "white",
+        [classes.whiteOutlined]: color === "whiteOutlined",
+        [classes.blueOutlined]: color === "blueOutlined",
         [classes.purple]: color === "purple",
         [classes.blue]: color === "blue",
         [classes.disabled]: disabled
@@ -51,7 +27,10 @@ const Button = ({
     >
       {icon ? (
         <TriangleIcon
-          fill={color === "white" ? "#FFFFFF" : "#2489F5"}
+          className={classNames({
+            [classes.whiteOutlinedIcon]: color === "whiteOutlined",
+            [classes.blueOutlinedIcon]: color === "blueOutlined"
+          })}
           style={{ margin: "2px 5px 0 0" }}
         />
       ) : null}

@@ -2,7 +2,7 @@ const styles = {
   mainWrapper: {
     // height: 6464,
     background:
-      "linear-gradient(180deg, #2489F5 0%, #34C759 27.08%, #18ACFE 48.96%, #AF52DE 60.44%, #FFFFFF 95.98%)"
+      "linear-gradient(180deg, #2489F5 0%, #9940C7 22.92%, #FEBE18 44.27%, #34C759 68.75%, #FFFFFF 84.37%)"
   },
   wrapper: {
     height: "100%",

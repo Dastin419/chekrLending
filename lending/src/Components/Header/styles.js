@@ -69,7 +69,10 @@ const styles = {
       position: "initial"
     },
     "& .MuiAccordionSummary-root": {
-      display: "none"
+      display: "none",
+      background: "#2489F5 !important",
+      color: "#2489F5 !important",
+      backgroundColor: "#2489F5 !important"
     }
   },
   linkM: {

@@ -3,7 +3,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     padding: "50px 84px 68px",
-    background: "#FFFFFF",
+    background: "#F2F4F7",
     flexDirection: "column",
     "@media (max-width: 1100px)": {
       padding: "40px 40px 50px"
@@ -69,7 +69,7 @@ const styles = {
     justifyContent: "center",
     "@media (max-width: 560px)": {
       flexDirection: "column",
-      "& div:first-child": {
+      "& button:first-child": {
         marginBottom: 10
       }
     }

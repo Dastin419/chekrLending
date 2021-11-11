@@ -67,7 +67,7 @@ const Header = ({
             {isProfile ? null : (
               <span className={classes.button} style={{ marginRight: 10 }}>
                 <Button
-                  color="white"
+                  color="whiteOutlined"
                   label="Live demo"
                   icon={true}
                   margin={10}
@@ -83,7 +83,12 @@ const Header = ({
         </div>
       </div>
       <Accordion
-        style={{ position: "initial" }}
+        style={{
+          position: "initial",
+          background: "#2489F5 !important",
+          color: "#2489F5 !important",
+          backgroundColor: "#2489F5 !important"
+        }}
         className={classes.accordion}
         expanded={isOpen}
       >
@@ -92,7 +97,13 @@ const Header = ({
           aria-controls="panel1d-content"
           id="panel1d-header"
         />
-        <AccordionDetails style={{ background: "#2489F5" }}>
+        <AccordionDetails
+          style={{
+            background: "#2489F5",
+            color: "#2489F5",
+            backgroundColor: "#2489F5"
+          }}
+        >
           <div className={classes.linkM}>Log in</div>
           <div className={classes.linkM}>About</div>
           <div className={classes.linkM}>User`s stories</div>
