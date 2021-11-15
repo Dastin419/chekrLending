@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { Fragment, useContext, useRef, useState } from "react";
 import injectStyles from "react-jss";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
@@ -17,9 +17,10 @@ const Header = ({
   isOpen,
   setIsOpen,
   isLogin,
-  setIsLogin,
   isProfile,
-  setIsProfile
+  setIsProfile,
+  setIsOpenModalLogin,
+  setIsOpenModalCreateAccount
 }) => {
   return (
     <div
@@ -57,12 +58,20 @@ const Header = ({
                 </Link>
               ) : null
             ) : (
-              <div
-                onClick={() => setIsLogin(prev => !prev)}
-                className={classes.link}
-              >
-                Sign in
-              </div>
+              <Fragment>
+                <div
+                  onClick={() => setIsOpenModalLogin(true)}
+                  className={classes.link}
+                >
+                  Log in
+                </div>
+                <div
+                  onClick={() => setIsOpenModalCreateAccount(true)}
+                  className={classes.link}
+                >
+                  Sign in
+                </div>
+              </Fragment>
             )}
             {isProfile ? null : (
               <span className={classes.button} style={{ marginRight: 10 }}>

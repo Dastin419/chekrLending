@@ -125,7 +125,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ModalLogin = ({ isOpenModal, onCloseModal }) => {
+const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -232,7 +232,12 @@ const ModalLogin = ({ isOpenModal, onCloseModal }) => {
               className={classNames(classes.createAccountBlock, classes.bold)}
             >
               Not registered yet?{" "}
-              <span className={classes.forgetPass}>Create an Account</span>
+              <span
+                onClick={onClickCreateAccount}
+                className={classes.forgetPass}
+              >
+                Create an Account
+              </span>
             </div>
           </div>
         </div>

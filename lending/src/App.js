@@ -10,6 +10,7 @@ import createHistory from "history/createBrowserHistory";
 import ModalLogin from "./Components/ModalLogin/ModalLogin";
 import ModalCreateAccount from "./Components/ModalCreateAccount/ModalCreateAccount";
 import { createTheme, MuiThemeProvider } from "@material-ui/core";
+import { apiClient } from "./API";
 
 export const PATH = {
   default: "/",
@@ -31,7 +32,7 @@ const history = createHistory();
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [isProfile, setIsProfile] = useState(false);
 
   const [isOpenModalLogin, setIsOpenModalLogin] = useState(false);
@@ -45,7 +46,30 @@ const App = () => {
     }
   }, [isProfile]);
 
-  console.log({ isProfile });
+  const onSubmitRegister = async ({ mail, password }) => {
+    console.log({ mail, password });
+    console.log({ history });
+    const res = await apiClient.registerUser({
+      mail,
+      password
+    });
+
+    console.log({ res });
+  };
+
+  const handleClickLogin = () => {
+    setIsOpenModalCreateAccount(false);
+    setTimeout(() => {
+      setIsOpenModalLogin(true);
+    }, 500);
+  };
+
+  const handleClickCreateAccount = () => {
+    setIsOpenModalLogin(false);
+    setTimeout(() => {
+      setIsOpenModalCreateAccount(true);
+    }, 500);
+  };
 
   return (
     <MuiThemeProvider theme={theme}>
@@ -54,18 +78,22 @@ const App = () => {
           <ModalLogin
             isOpenModal={isOpenModalLogin}
             onCloseModal={() => setIsOpenModalLogin(false)}
+            onClickCreateAccount={handleClickCreateAccount}
           />
           <ModalCreateAccount
             isOpenModal={isOpenModalCreateAccount}
             onCloseModal={() => setIsOpenModalCreateAccount(false)}
+            onClickLogIn={handleClickLogin}
+            onSubmitRegister={onSubmitRegister}
           />
           <Header
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             isLogin={isLogin}
-            setIsLogin={setIsLogin}
+            setIsOpenModalLogin={setIsOpenModalLogin}
             setIsProfile={setIsProfile}
             isProfile={isProfile}
+            setIsOpenModalCreateAccount={setIsOpenModalCreateAccount}
           />
           <Switch>
             <Route

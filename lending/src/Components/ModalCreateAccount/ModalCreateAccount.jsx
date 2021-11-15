@@ -125,26 +125,46 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ModalCreateAccount = ({ isOpenModal, onCloseModal }) => {
+const ModalCreateAccount = ({
+  isOpenModal,
+  onCloseModal,
+  onClickLogIn,
+  onSubmitRegister
+}) => {
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-  const [values, setValues] = useState({ email: "", password: "", name: "" });
+
+  const [values, setValues] = useState({
+    email: "",
+    password: ""
+    // , name: ""
+  });
 
   useEffect(() => {
-    if (!values.email || !values.password || !values.name) {
+    if (
+      !values.email ||
+      !values.password ||
+      !checked
+      // || !values.name
+    ) {
       setIsDisabled(true);
     } else {
       setIsDisabled(false);
     }
-  }, [values.email, values.password, values.name]);
+  }, [
+    values.email,
+    values.password,
+    checked
+    // , values.name
+  ]);
 
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
   const onSubmit = values => {
-    console.log(values);
+    onSubmitRegister({ mail: values.email, password: values.password });
   };
 
   const callbackError = error => {
@@ -183,17 +203,17 @@ const ModalCreateAccount = ({ isOpenModal, onCloseModal }) => {
               <div className={classes.line} />
             </div>
             <form className={classes.root} autoComplete="off">
-              <Input
-                placeholder="Name"
-                label="Name"
-                isRequired={true}
-                autoComplete={false}
-                required={true}
-                value={values.name}
-                handleChange={handleChange}
-                type="name"
-                callbackError={callbackError}
-              />
+              {/*<Input*/}
+              {/*  placeholder="Name"*/}
+              {/*  label="Name"*/}
+              {/*  isRequired={true}*/}
+              {/*  autoComplete={false}*/}
+              {/*  required={true}*/}
+              {/*  value={values.name}*/}
+              {/*  handleChange={handleChange}*/}
+              {/*  type="name"*/}
+              {/*  callbackError={callbackError}*/}
+              {/*/>*/}
               <Input
                 placeholder="mail@website.com"
                 label="Email"
@@ -231,7 +251,7 @@ const ModalCreateAccount = ({ isOpenModal, onCloseModal }) => {
           <div className={classes.footer}>
             <GenericButton
               style={{ width: "100%" }}
-              label="Login"
+              label="Create"
               onClick={() => onSubmit(values)}
               disabled={isError || isDisabled}
               type="filled"
@@ -241,7 +261,9 @@ const ModalCreateAccount = ({ isOpenModal, onCloseModal }) => {
               className={classNames(classes.createAccountBlock, classes.bold)}
             >
               Already have an Account?{" "}
-              <span className={classes.forgetPass}>Log in</span>
+              <span onClick={onClickLogIn} className={classes.forgetPass}>
+                Log in
+              </span>
             </div>
           </div>
         </div>
