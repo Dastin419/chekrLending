@@ -17,7 +17,7 @@ const MainScreenIcon = props => (
         height="166"
         rx="5"
         fill="url(#mainScreenIcon0)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter1_ddd_57:2969)">
@@ -28,7 +28,7 @@ const MainScreenIcon = props => (
         height="356"
         rx="5"
         fill="url(#mainScreenIcon1)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
       <rect
         x="22.5"
@@ -37,7 +37,7 @@ const MainScreenIcon = props => (
         height="355"
         rx="4.5"
         stroke="#2489F5"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter2_ddd_57:2969)">
@@ -48,7 +48,7 @@ const MainScreenIcon = props => (
         height="128"
         rx="5"
         fill="url(#mainScreenIcon2)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <defs>
@@ -59,9 +59,9 @@ const MainScreenIcon = props => (
         width="438"
         height="206"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -129,9 +129,9 @@ const MainScreenIcon = props => (
         width="591"
         height="396"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -217,9 +217,9 @@ const MainScreenIcon = props => (
         width="230"
         height="168"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

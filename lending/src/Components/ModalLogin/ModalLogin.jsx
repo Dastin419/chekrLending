@@ -184,12 +184,11 @@ const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
               <div className={classes.lineText}>Or Sign in with Email</div>
               <div className={classes.line} />
             </div>
-            <form className={classes.root} autoComplete="off">
+            <form className={classes.root}>
               <Input
                 placeholder="mail@website.com"
                 label="Email"
                 isRequired={true}
-                autoComplete={false}
                 required={true}
                 value={values.email}
                 handleChange={handleChange}
@@ -200,7 +199,6 @@ const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
                 placeholder="Min. 8 charachter"
                 label="Password"
                 isRequired={true}
-                autoComplete={false}
                 required={true}
                 value={values.password}
                 handleChange={handleChange}

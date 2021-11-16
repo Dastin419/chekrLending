@@ -1,7 +1,7 @@
 import { find, isEmpty } from "lodash";
 
-const BASE_URI = "https://127.0.0.1:9090/chckr";
-
+const BASE_URI = "https://chckr.io/chckr";
+//lend
 class APIClient {
   /**
    * API Path
@@ -9,10 +9,28 @@ class APIClient {
    */
 
   path = {
-    register: "/add_user/",
+    register: "/add_user",
     login: "/user_login/",
     changeUserData: "/change_data"
   };
+
+  prepareRequest({ url, method = "GET", body = null }) {
+    // var myHeaders = new Headers();
+    // myHeaders.append("Content-Type", "text/plain");
+
+    const headers = new Headers({
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    });
+    const initParam = { method, headers, mode: "cors" };
+
+    if (body) {
+      initParam["body"] = JSON.stringify(body);
+    }
+    console.log({ body: initParam.body });
+    console.log(`Request: [${method}] ${url}`);
+    return new Request(url, initParam);
+  }
 
   registerUser = async data => {
     console.log({ data });
@@ -21,9 +39,11 @@ class APIClient {
       method: "POST",
       body: data
     });
-
+    console.log({ request });
     const response = await fetch(request);
+    console.log({ response });
     const result = await response.json();
+    console.log({ result });
     return result;
   };
 
@@ -52,18 +72,5 @@ class APIClient {
     const result = await response.json();
     return result;
   };
-
-  prepareRequest({ url, method = "GET", body = null }) {
-    const headers = new Headers({
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    });
-    const initParam = { method, headers };
-    if (body) {
-      initParam["body"] = JSON.stringify(body);
-    }
-    console.log(`Request: [${method}] ${url}`);
-    return new Request(url, initParam);
-  }
 }
 export const apiClient = new APIClient();

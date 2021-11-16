@@ -49,12 +49,16 @@ const App = () => {
   const onSubmitRegister = async ({ mail, password }) => {
     console.log({ mail, password });
     console.log({ history });
-    const res = await apiClient.registerUser({
-      mail,
-      password
-    });
 
-    console.log({ res });
+    try {
+      const res = await apiClient.registerUser({
+        mail: mail.trim(),
+        password: password.trim()
+      });
+      console.log({ res });
+    } catch (error) {
+      console.log({ error });
+    }
   };
 
   const handleClickLogin = () => {

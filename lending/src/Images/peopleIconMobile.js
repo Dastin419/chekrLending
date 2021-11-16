@@ -24,7 +24,7 @@ const PeopleIconMobil = props => (
         cy="139.551"
         r="32.4875"
         fill="url(#peopleMob1)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter1_dd_241:1004)">
@@ -33,7 +33,7 @@ const PeopleIconMobil = props => (
         cy="99.369"
         r="18.8085"
         fill="url(#peopleMob2)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter2_dd_241:1004)">
@@ -42,7 +42,7 @@ const PeopleIconMobil = props => (
         cy="172.039"
         r="27.3579"
         fill="url(#peopleMob3)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter3_dd_241:1004)">
@@ -51,7 +51,7 @@ const PeopleIconMobil = props => (
         cy="118.177"
         r="26.5029"
         fill="url(#peopleMob4)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter4_dd_241:1004)">
@@ -60,7 +60,7 @@ const PeopleIconMobil = props => (
         cy="172.038"
         r="32.4875"
         fill="url(#peopleMob5)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter5_dd_241:1004)">
@@ -69,7 +69,7 @@ const PeopleIconMobil = props => (
         cy="99.3691"
         r="32.4875"
         fill="url(#peopleMob6)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter6_dd_241:1004)">
@@ -78,7 +78,7 @@ const PeopleIconMobil = props => (
         cy="148.955"
         r="23.0832"
         fill="url(#peopleMob7)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter7_dd_241:1004)">
@@ -87,7 +87,7 @@ const PeopleIconMobil = props => (
         cy="119.033"
         r="25.648"
         fill="url(#peopleMob8)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter8_dd_241:1004)">
@@ -96,7 +96,7 @@ const PeopleIconMobil = props => (
         cy="184.008"
         r="25.648"
         fill="url(#peopleMob9)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter9_dd_241:1004)">
@@ -140,9 +140,9 @@ const PeopleIconMobil = props => (
         width="104.975"
         height="104.975"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -207,9 +207,9 @@ const PeopleIconMobil = props => (
         width="77.6172"
         height="77.6171"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -274,9 +274,9 @@ const PeopleIconMobil = props => (
         width="94.7158"
         height="94.7158"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -341,9 +341,9 @@ const PeopleIconMobil = props => (
         width="93.0059"
         height="93.0059"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -408,9 +408,9 @@ const PeopleIconMobil = props => (
         width="104.975"
         height="104.975"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -478,9 +478,9 @@ const PeopleIconMobil = props => (
         width="104.975"
         height="104.975"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -545,9 +545,9 @@ const PeopleIconMobil = props => (
         width="86.1665"
         height="86.1664"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -615,9 +615,9 @@ const PeopleIconMobil = props => (
         width="91.2959"
         height="91.2959"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -682,9 +682,9 @@ const PeopleIconMobil = props => (
         width="91.2959"
         height="91.2959"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -752,9 +752,9 @@ const PeopleIconMobil = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -811,9 +811,9 @@ const PeopleIconMobil = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -870,9 +870,9 @@ const PeopleIconMobil = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

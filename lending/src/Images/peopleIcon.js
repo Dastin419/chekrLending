@@ -24,7 +24,7 @@ const PeopleIcon = props => (
         cy="163.994"
         r="38"
         fill="url(#people1)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter1_dd_57:3030)">
@@ -33,7 +33,7 @@ const PeopleIcon = props => (
         cy="116.994"
         r="22"
         fill="url(#people2)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter2_dd_57:3030)">
@@ -42,7 +42,7 @@ const PeopleIcon = props => (
         cy="201.994"
         r="32"
         fill="url(#people3)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter3_dd_57:3030)">
@@ -51,7 +51,7 @@ const PeopleIcon = props => (
         cy="138.994"
         r="31"
         fill="url(#people4)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter4_dd_57:3030)">
@@ -60,7 +60,7 @@ const PeopleIcon = props => (
         cy="201.994"
         r="38"
         fill="url(#people5)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter5_dd_57:3030)">
@@ -69,7 +69,7 @@ const PeopleIcon = props => (
         cy="116.994"
         r="38"
         fill="url(#people6)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter6_dd_57:3030)">
@@ -78,7 +78,7 @@ const PeopleIcon = props => (
         cy="174.994"
         r="27"
         fill="url(#people7)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter7_dd_57:3030)">
@@ -87,7 +87,7 @@ const PeopleIcon = props => (
         cy="139.994"
         r="30"
         fill="url(#people8)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter8_dd_57:3030)">
@@ -96,7 +96,7 @@ const PeopleIcon = props => (
         cy="215.995"
         r="30"
         fill="url(#people9)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <path
@@ -165,9 +165,9 @@ const PeopleIcon = props => (
         width="116"
         height="116"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -232,9 +232,9 @@ const PeopleIcon = props => (
         width="84"
         height="84"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -299,9 +299,9 @@ const PeopleIcon = props => (
         width="104"
         height="104"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -366,9 +366,9 @@ const PeopleIcon = props => (
         width="102"
         height="102"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -433,9 +433,9 @@ const PeopleIcon = props => (
         width="116"
         height="116"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -503,9 +503,9 @@ const PeopleIcon = props => (
         width="116"
         height="116"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -570,9 +570,9 @@ const PeopleIcon = props => (
         width="94"
         height="94"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -640,9 +640,9 @@ const PeopleIcon = props => (
         width="100"
         height="100"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -707,9 +707,9 @@ const PeopleIcon = props => (
         width="100"
         height="100"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -777,9 +777,9 @@ const PeopleIcon = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -836,9 +836,9 @@ const PeopleIcon = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -895,9 +895,9 @@ const PeopleIcon = props => (
         width="90"
         height="90"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

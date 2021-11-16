@@ -83,7 +83,6 @@ const Input = ({
         id="outlined-basic"
         variant="outlined"
         placeholder={placeholder}
-        autoComplete={autoComplete}
         required={required}
         onChange={handleChange(type)}
         value={value}

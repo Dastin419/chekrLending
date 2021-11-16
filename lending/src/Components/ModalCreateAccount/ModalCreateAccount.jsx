@@ -202,7 +202,7 @@ const ModalCreateAccount = ({
               <div className={classes.lineText}>Or Sign in with Email</div>
               <div className={classes.line} />
             </div>
-            <form className={classes.root} autoComplete="off">
+            <form className={classes.root}>
               {/*<Input*/}
               {/*  placeholder="Name"*/}
               {/*  label="Name"*/}
@@ -218,7 +218,6 @@ const ModalCreateAccount = ({
                 placeholder="mail@website.com"
                 label="Email"
                 isRequired={true}
-                autoComplete={false}
                 required={true}
                 value={values.email}
                 handleChange={handleChange}
@@ -229,7 +228,6 @@ const ModalCreateAccount = ({
                 placeholder="Min. 8 charachter"
                 label="Password"
                 isRequired={true}
-                autoComplete={false}
                 required={true}
                 value={values.password}
                 handleChange={handleChange}

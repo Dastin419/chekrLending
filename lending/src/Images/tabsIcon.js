@@ -17,7 +17,7 @@ const TabsIcon = props => (
         height="60.0942"
         rx="5"
         fill="url(#tabsIcon0)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter1_dd_57:2985)">
@@ -28,7 +28,7 @@ const TabsIcon = props => (
         height="60"
         rx="5"
         fill="url(#tabsIcon1)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter2_dd_57:2985)">
@@ -39,7 +39,7 @@ const TabsIcon = props => (
         height="60.092"
         rx="5"
         fill="url(#tabsIcon2)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter3_dd_57:2985)">
@@ -50,7 +50,7 @@ const TabsIcon = props => (
         height="60.1921"
         rx="5"
         fill="url(#tabsIcon3)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <defs>
@@ -61,9 +61,9 @@ const TabsIcon = props => (
         width="435.485"
         height="100.094"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -131,9 +131,9 @@ const TabsIcon = props => (
         width="435"
         height="100"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -201,9 +201,9 @@ const TabsIcon = props => (
         width="435.485"
         height="100.092"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -271,9 +271,9 @@ const TabsIcon = props => (
         width="435.485"
         height="100.192"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

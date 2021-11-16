@@ -18,7 +18,7 @@ const HireIcon = props => (
         height="223.206"
         rx="5"
         fill="url(#hire0)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter1_dd_57:2990)">
@@ -28,7 +28,7 @@ const HireIcon = props => (
         width="242.901"
         height="344"
         fill="url(#hire1)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter2_dd_57:2990)">
@@ -38,7 +38,7 @@ const HireIcon = props => (
         width="232.397"
         height="26.2595"
         fill="url(#hire2)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <g filter="url(#filter3_dd_57:2990)">
@@ -48,7 +48,7 @@ const HireIcon = props => (
         width="232.397"
         height="24.9466"
         fill="url(#hire3)"
-        shape-rendering="crispEdges"
+        shapeRendering="crispEdges"
       />
     </g>
     <defs>
@@ -59,9 +59,9 @@ const HireIcon = props => (
         width="377.435"
         height="263.206"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -129,9 +129,9 @@ const HireIcon = props => (
         width="282.901"
         height="384"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -199,9 +199,9 @@ const HireIcon = props => (
         width="272.397"
         height="66.2595"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -269,9 +269,9 @@ const HireIcon = props => (
         width="272.397"
         height="64.9466"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
