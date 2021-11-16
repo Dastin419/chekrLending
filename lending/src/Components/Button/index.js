@@ -23,7 +23,13 @@ const Button = ({
         [classes.blue]: color === "blue",
         [classes.disabled]: disabled
       })}
-      onClick={disabled ? () => {} : onClick}
+      onClick={
+        disabled
+          ? () => {}
+          : () => {
+              onClick();
+            }
+      }
     >
       {icon ? (
         <TriangleIcon

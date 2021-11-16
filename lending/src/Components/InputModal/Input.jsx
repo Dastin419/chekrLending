@@ -33,7 +33,8 @@ const Input = ({
   handleChange,
   value,
   type,
-  callbackError
+  callbackError,
+  disabled = false
 }) => {
   const classes = useStyles();
   const [error, setError] = useState(null);
@@ -46,7 +47,7 @@ const Input = ({
 
   useEffect(() => {
     if (isFirstRender) {
-      if (!value) {
+      if (!value && required) {
         setError("Field is required");
       } else {
         setError(null);
@@ -87,6 +88,7 @@ const Input = ({
         onChange={handleChange(type)}
         value={value}
         type={type}
+        disabled={disabled}
       />
       {error ? (
         <FormHelperText style={{ color: "red" }} id={label}>

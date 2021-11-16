@@ -129,12 +129,12 @@ const ModalCreateAccount = ({
   isOpenModal,
   onCloseModal,
   onClickLogIn,
-  onSubmitRegister
+  onSubmitRegister,
+  error
 }) => {
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-
   const [values, setValues] = useState({
     email: "",
     password: ""
@@ -254,6 +254,9 @@ const ModalCreateAccount = ({
               disabled={isError || isDisabled}
               type="filled"
             />
+            {error ? (
+              <span style={{ color: "red", marginTop: 5 }}>{error}</span>
+            ) : null}
 
             <div
               className={classNames(classes.createAccountBlock, classes.bold)}

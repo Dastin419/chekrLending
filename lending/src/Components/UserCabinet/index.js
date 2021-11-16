@@ -68,7 +68,12 @@ const rowsSubscribeTab = [
   }
 ];
 
-const UserCabinet = ({ classes, setIsProfile }) => {
+const UserCabinet = ({
+  classes,
+  setIsProfile,
+  userData,
+  onSubmitProfileUserData
+}) => {
   const [currentTab, setCurrentTab] = useState(TABS.MY_ESSAY.id);
 
   const getContent = tab => {
@@ -90,7 +95,13 @@ const UserCabinet = ({ classes, setIsProfile }) => {
           />
         );
       case TABS.PROFILE.id:
-        return <ProfileTab classes={classes} />;
+        return (
+          <ProfileTab
+            onSubmitProfileUserData={onSubmitProfileUserData}
+            userData={userData}
+            classes={classes}
+          />
+        );
       default: {
         return <div>{tab}</div>;
       }
@@ -133,11 +144,13 @@ const UserCabinet = ({ classes, setIsProfile }) => {
           {TABS.PROFILE.text}
         </div>
         <div className={classes.line} />
-        <div className={classNames(classes.tabBlock, classes.hover)}>
-          <Link onClick={() => setIsProfile(false)} to={PATH.default}>
-            Back
-          </Link>
-        </div>
+        <Link
+          className={classNames(classes.tabBlock, classes.hover)}
+          onClick={() => setIsProfile(false)}
+          to={PATH.default}
+        >
+          Back
+        </Link>
         <div className={classNames(classes.tabBlock, classes.hover)}>
           Log out <LogOutIcon style={{ marginLeft: 10 }} />
         </div>

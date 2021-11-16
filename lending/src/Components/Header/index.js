@@ -53,9 +53,19 @@ const Header = ({
           <div className={classes.buttonWrapper}>
             {isLogin ? (
               !isProfile ? (
-                <Link onClick={() => setIsProfile(true)} to={PATH.profile}>
-                  <ProfileIcon style={{ marginRight: 10, cursor: "pointer" }} />
-                </Link>
+                <>
+                  <div
+                    // onClick={() => setIsOpenModalLogin(true)}
+                    className={classes.link}
+                  >
+                    Log out
+                  </div>
+                  <Link onClick={() => setIsProfile(true)} to={PATH.profile}>
+                    <ProfileIcon
+                      style={{ marginRight: 10, cursor: "pointer" }}
+                    />
+                  </Link>
+                </>
               ) : null
             ) : (
               <Fragment>

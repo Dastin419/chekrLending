@@ -125,7 +125,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
+const ModalLogin = ({
+  isOpenModal,
+  onCloseModal,
+  onClickCreateAccount,
+  onSubmitLogin,
+  error
+}) => {
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -141,12 +147,11 @@ const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
   }, [values.email, values.password, values.name]);
 
   const handleChange = prop => event => {
-    console.log({ prop, event });
     setValues({ ...values, [prop]: event.target.value });
   };
 
   const onSubmit = values => {
-    console.log(values);
+    onSubmitLogin({ mail: values.email, password: values.password });
   };
 
   const callbackError = error => {
@@ -225,7 +230,9 @@ const ModalLogin = ({ isOpenModal, onCloseModal, onClickCreateAccount }) => {
               disabled={isError || isDisabled}
               type="filled"
             />
-
+            {error ? (
+              <span style={{ color: "red", marginTop: 5 }}>{error}</span>
+            ) : null}
             <div
               className={classNames(classes.createAccountBlock, classes.bold)}
             >

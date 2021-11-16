@@ -23,7 +23,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const InputAdornments = ({ type, value, label, handleChange, disabled }) => {
+const InputAdornments = ({
+  type,
+  value,
+  label,
+  handleChange,
+  disabled,
+  required = true
+}) => {
   const classes = useStyles();
   const [isShowPassword, setIsShowPassword] = useState(type === "password");
 
@@ -34,15 +41,17 @@ const InputAdornments = ({ type, value, label, handleChange, disabled }) => {
   const handleMouseDownPassword = event => {
     event.preventDefault();
   };
-  const error = !value;
+  const error = required ? !value : false;
+  const errorMin =
+    type === "password" && value.length < 8 ? "Min. 8 charachter" >= 8 : false;
   return (
     <div className={classes.root}>
       <div className={classes.label}>{label}</div>
       <div>
         <FormControl className={classes.textField} error={error}>
           <Input
-            disabled={disabled}
-            required={true}
+            disabled={disabled || errorMin}
+            required={required}
             id={type}
             type={!isShowPassword ? "text" : "password"}
             value={value}
@@ -61,8 +70,10 @@ const InputAdornments = ({ type, value, label, handleChange, disabled }) => {
               ) : null
             }
           />
-          {error ? (
-            <FormHelperText id={type}>Field is required</FormHelperText>
+          {error || errorMin ? (
+            <FormHelperText id={type}>
+              {errorMin ? errorMin : "Field is required"}
+            </FormHelperText>
           ) : (
             <FormHelperText id={type}> </FormHelperText>
           )}

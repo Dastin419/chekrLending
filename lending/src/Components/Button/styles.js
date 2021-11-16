@@ -21,7 +21,24 @@ const styles = {
     fontWeight: 700,
     fontSize: 16
   },
-  disabled: {},
+  disabled: {
+    background: "#F8F9FA !important",
+    color: "#80869D !important",
+    border: "1px solid #CAD2DB !important",
+    boxShadow: "none !important",
+    "&:hover": {
+      background: "#F8F9FA !important",
+      color: "#80869D !important",
+      border: "1px solid #CAD2DB !important",
+      boxShadow: "none !important"
+    },
+    "&:active": {
+      background: "#F8F9FA !important",
+      color: "#80869D !important",
+      border: "1px solid #CAD2DB !important",
+      boxShadow: "none !important"
+    }
+  },
   whiteOutlined: {
     color: "#FFFFFF",
     border: "2px solid #FFFFFF",

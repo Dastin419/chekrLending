@@ -44,10 +44,7 @@ const styles = {
     alignItems: "center",
     marginBottom: 15,
     padding: "6px 0",
-    "& a": {
-      color: "#333333",
-      textDecoration: "none"
-    }
+    textDecoration: "none"
   },
   line: {
     width: "100%",

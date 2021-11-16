@@ -10,7 +10,7 @@ class APIClient {
 
   path = {
     register: "/add_user",
-    login: "/user_login/",
+    login: "/user_login",
     changeUserData: "/change_data"
   };
 
@@ -27,28 +27,22 @@ class APIClient {
     if (body) {
       initParam["body"] = JSON.stringify(body);
     }
-    console.log({ body: initParam.body });
     console.log(`Request: [${method}] ${url}`);
     return new Request(url, initParam);
   }
 
   registerUser = async data => {
-    console.log({ data });
     const request = this.prepareRequest({
       url: `${BASE_URI}${this.path.register}`,
       method: "POST",
       body: data
     });
-    console.log({ request });
     const response = await fetch(request);
-    console.log({ response });
     const result = await response.json();
-    console.log({ result });
     return result;
   };
 
   loginUser = async data => {
-    console.log({ data });
     const request = this.prepareRequest({
       url: `${BASE_URI}${this.path.login}`,
       method: "POST",
@@ -61,7 +55,6 @@ class APIClient {
   };
 
   changeUserData = async data => {
-    console.log({ data });
     const request = this.prepareRequest({
       url: `${BASE_URI}${this.path.changeUserData}`,
       method: "POST",
