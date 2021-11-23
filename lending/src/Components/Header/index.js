@@ -157,13 +157,31 @@ const Header = ({
               Log out
             </div>
           )}
-          <div onClick={() => scrollInto("Features")} className={classes.linkM}>
+          <div
+            onClick={() => {
+              scrollInto("Features");
+              setIsOpen(false);
+            }}
+            className={classes.linkM}
+          >
             Features
           </div>
-          <div onClick={() => scrollInto("Pricing")} className={classes.linkM}>
+          <div
+            onClick={() => {
+              scrollInto("Pricing");
+              setIsOpen(false);
+            }}
+            className={classes.linkM}
+          >
             Pricing
           </div>
-          <div onClick={() => scrollInto("About")} className={classes.linkM}>
+          <div
+            onClick={() => {
+              scrollInto("About");
+              setIsOpen(false);
+            }}
+            className={classes.linkM}
+          >
             About
           </div>
         </AccordionDetails>

@@ -43,8 +43,8 @@ const Footer = ({ classes, isOpen, scrollInto }) => {
         <div className={classes.rightBlock}>
           <div className={classes.socialWrap}>
             <FacebookIcon />
-            <TwitterIcon />
-            <LinkendinIcon />
+            {/*<TwitterIcon />*/}
+            {/*<LinkendinIcon />*/}
           </div>
           <div className={classNames(classes.subTitle, {})}>© Chckr 2021</div>
         </div>
