@@ -72,7 +72,9 @@ const UserCabinet = ({
   classes,
   setIsProfile,
   userData,
-  onSubmitProfileUserData
+  onSubmitProfileUserData,
+  handleLogOut,
+  history
 }) => {
   const [currentTab, setCurrentTab] = useState(TABS.MY_ESSAY.id);
 
@@ -108,6 +110,15 @@ const UserCabinet = ({
     }
   };
 
+  const onBack = () => {
+    history.push("/");
+    setIsProfile(false);
+  };
+
+  const onLogout = () => {
+    onBack();
+    handleLogOut();
+  };
   return (
     <div className={classes.wrapper}>
       <div className={classes.leftBlock}>
@@ -146,14 +157,18 @@ const UserCabinet = ({
         <div className={classes.line} />
         <Link
           className={classNames(classes.tabBlock, classes.hover)}
-          onClick={() => setIsProfile(false)}
+          onClick={onBack}
           to={PATH.default}
         >
           Back
         </Link>
-        <div className={classNames(classes.tabBlock, classes.hover)}>
+        <Link
+          onClick={onLogout}
+          to={PATH.default}
+          className={classNames(classes.tabBlock, classes.hover)}
+        >
           Log out <LogOutIcon style={{ marginLeft: 10 }} />
-        </div>
+        </Link>
       </div>
     </div>
   );

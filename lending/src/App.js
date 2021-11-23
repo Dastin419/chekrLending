@@ -10,7 +10,8 @@ import createHistory from "history/createBrowserHistory";
 import ModalLogin from "./Components/ModalLogin/ModalLogin";
 import ModalCreateAccount from "./Components/ModalCreateAccount/ModalCreateAccount";
 import { createTheme, MuiThemeProvider } from "@material-ui/core";
-import { apiClient } from "./API";
+import { apiClient } from "./Modules/API";
+import { authorization } from "./Modules/auth";
 
 export const PATH = {
   default: "/",
@@ -31,6 +32,16 @@ const theme = createTheme({
 const history = createHistory();
 
 const App = () => {
+  useEffect(() => {
+    const userId = authorization.getUserId();
+
+    console.log({ history });
+    if (history.location.pathname === PATH.profile && !userId) {
+      history.push("/");
+      window.location.href = "/";
+    }
+  }, [history.location.pathname]);
+
   const [isOpen, setIsOpen] = useState(false);
   const [userData, setUserData] = useState({});
   const [isProfile, setIsProfile] = useState(false);
@@ -40,6 +51,52 @@ const App = () => {
   const [isOpenModalCreateAccount, setIsOpenModalCreateAccount] = useState(
     false
   );
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const userId = authorization.getUserId();
+
+    console.log({ history });
+    if (history.location.pathname === PATH.profile) {
+      if (!userId) {
+        history.push("/");
+        window.location.href = "/";
+      } else {
+        setIsProfile(true);
+      }
+    }
+  }, [history.location.pathname]);
+
+  useEffect(() => {
+    const token = authorization.getAPIKey();
+    const userId = authorization.getUserId();
+
+    if (token && userId) {
+      setUser(userId);
+    }
+  }, []);
+
+  const setUser = async userId => {
+    const user = await apiClient.getUser({ user_id: userId });
+    if (user) {
+      setUserData({
+        id: userId,
+        name: user.name,
+        surname: user.surname,
+        email: user.mail
+      });
+      console.log({ user });
+      setIsLogin(true);
+    } else {
+      setIsLogin(false);
+    }
+  };
+
+  const handleLogOut = () => {
+    setIsLogin(false);
+    setUserData({});
+    authorization.logout();
+  };
 
   const handleClickLogin = () => {
     setIsOpenModalCreateAccount(false);
@@ -83,10 +140,11 @@ const App = () => {
         password: password.trim()
       });
       setIsLoginError(res.Error);
-      if (res.id) {
-        setUserData({ userId: res.id, email: res.mail });
-      }
+
       if (res.Success) {
+        authorization.login({ apiKey: res.token, userId: res.user_id });
+        setUserData({ userId: res.user_id, email: res.mail });
+        setIsLogin(Boolean(res.token));
         setIsOpenModalLogin(false);
       }
     } catch (error) {
@@ -103,20 +161,23 @@ const App = () => {
         name: name ? name.trim() : null,
         surname: surname ? surname.trim() : null
       });
-
+      console.log({ res });
+      const user = await apiClient.getUser({ user_id: userData.userId });
+      if (user) {
+        setUserData({
+          id: userData.userId,
+          name: user.name,
+          surname: user.surname,
+          email: user.mail
+        });
+      }
       // TODO взять юзера и сетнуть дату
     } catch (error) {
       console.log({ error });
     }
   };
 
-  useEffect(() => {
-    if (history.location.pathname === PATH.profile && !userData.userId) {
-      history.push("/");
-      window.location.href = "/";
-    }
-  }, [history.location.pathname]);
-
+  console.log({ isProfile });
   // TODO add logout
   return (
     <MuiThemeProvider theme={theme}>
@@ -139,11 +200,12 @@ const App = () => {
           <Header
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            isLogin={userData.userId}
+            isLogin={isLogin}
             setIsOpenModalLogin={setIsOpenModalLogin}
             setIsProfile={setIsProfile}
             isProfile={isProfile}
             setIsOpenModalCreateAccount={setIsOpenModalCreateAccount}
+            handleLogOut={handleLogOut}
           />
           <Switch>
             <Route
@@ -153,6 +215,8 @@ const App = () => {
                   onSubmitProfileUserData={onSubmitProfileUserData}
                   userData={userData}
                   setIsProfile={setIsProfile}
+                  handleLogOut={handleLogOut}
+                  history={history}
                 />
               )}
             />

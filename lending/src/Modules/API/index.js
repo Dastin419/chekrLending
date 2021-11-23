@@ -1,4 +1,5 @@
 import { find, isEmpty } from "lodash";
+import { authorization } from "../auth";
 
 const BASE_URI = "https://chckr.io/chckr";
 //lend
@@ -11,8 +12,11 @@ class APIClient {
   path = {
     register: "/add_user",
     login: "/user_login",
-    changeUserData: "/change_data"
+    changeUserData: "/change_data",
+    getUser: "/user_profile"
   };
+
+  token = authorization.getAPIKey();
 
   prepareRequest({ url, method = "GET", body = null }) {
     // var myHeaders = new Headers();
@@ -58,7 +62,19 @@ class APIClient {
     const request = this.prepareRequest({
       url: `${BASE_URI}${this.path.changeUserData}`,
       method: "POST",
-      body: data
+      body: { ...data, token: this.token }
+    });
+
+    const response = await fetch(request);
+    const result = await response.json();
+    return result;
+  };
+
+  getUser = async data => {
+    const request = this.prepareRequest({
+      url: `${BASE_URI}${this.path.getUser}`,
+      method: "POST",
+      body: { ...data, token: this.token }
     });
 
     const response = await fetch(request);

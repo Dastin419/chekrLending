@@ -68,7 +68,7 @@ const Input = ({
         }
       }
     }
-  }, [value.length]);
+  }, [value]);
 
   useEffect(() => {
     callbackError(error);

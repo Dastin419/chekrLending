@@ -20,7 +20,8 @@ const Header = ({
   isProfile,
   setIsProfile,
   setIsOpenModalLogin,
-  setIsOpenModalCreateAccount
+  setIsOpenModalCreateAccount,
+  handleLogOut
 }) => {
   return (
     <div
@@ -54,10 +55,7 @@ const Header = ({
             {isLogin ? (
               !isProfile ? (
                 <>
-                  <div
-                    // onClick={() => setIsOpenModalLogin(true)}
-                    className={classes.link}
-                  >
+                  <div onClick={handleLogOut} className={classes.link}>
                     Log out
                   </div>
                   <Link onClick={() => setIsProfile(true)} to={PATH.profile}>
@@ -123,7 +121,26 @@ const Header = ({
             backgroundColor: "#2489F5"
           }}
         >
-          <div className={classes.linkM}>Log in</div>
+          {!isLogin ? (
+            <>
+              <div
+                onClick={() => setIsOpenModalLogin(true)}
+                className={classes.linkM}
+              >
+                Log in
+              </div>
+              <div
+                onClick={() => setIsOpenModalCreateAccount(true)}
+                className={classes.linkM}
+              >
+                Sign in
+              </div>
+            </>
+          ) : (
+            <div onClick={handleLogOut} className={classes.linkM}>
+              Log out
+            </div>
+          )}
           <div className={classes.linkM}>About</div>
           <div className={classes.linkM}>User`s stories</div>
           <div className={classes.linkM}>Updates</div>
