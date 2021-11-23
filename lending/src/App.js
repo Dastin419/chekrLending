@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import MainWrapper from "./Components/MainWrapper";
@@ -35,7 +35,6 @@ const App = () => {
   useEffect(() => {
     const userId = authorization.getUserId();
 
-    console.log({ history });
     if (history.location.pathname === PATH.profile && !userId) {
       history.push("/");
       window.location.href = "/";
@@ -56,7 +55,6 @@ const App = () => {
   useEffect(() => {
     const userId = authorization.getUserId();
 
-    console.log({ history });
     if (history.location.pathname === PATH.profile) {
       if (!userId) {
         history.push("/");
@@ -85,7 +83,7 @@ const App = () => {
         surname: user.surname,
         email: user.mail
       });
-      console.log({ user });
+
       setIsLogin(true);
     } else {
       setIsLogin(false);
@@ -161,7 +159,6 @@ const App = () => {
         name: name ? name.trim() : null,
         surname: surname ? surname.trim() : null
       });
-      console.log({ res });
       const user = await apiClient.getUser({ user_id: userData.userId });
       if (user) {
         setUserData({
@@ -177,7 +174,55 @@ const App = () => {
     }
   };
 
-  console.log({ isProfile });
+  const refFeatures = useRef(null);
+  const refPricing = useRef(null);
+  const refAbout = useRef(null);
+
+  const scrollInto = type => {
+    if (type === "Features") {
+      if (refFeatures.current) {
+        try {
+          setTimeout(() => {
+            refFeatures.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center"
+            });
+          }, 100);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    } else if (type === "Pricing") {
+      if (refPricing.current) {
+        try {
+          setTimeout(() => {
+            refPricing.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center"
+            });
+          }, 100);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    } else if (type === "About") {
+      if (refAbout.current) {
+        try {
+          setTimeout(() => {
+            refAbout.current.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center"
+            });
+          }, 100);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    }
+  };
   // TODO add logout
   return (
     <MuiThemeProvider theme={theme}>
@@ -206,6 +251,7 @@ const App = () => {
             isProfile={isProfile}
             setIsOpenModalCreateAccount={setIsOpenModalCreateAccount}
             handleLogOut={handleLogOut}
+            scrollInto={scrollInto}
           />
           <Switch>
             <Route
@@ -222,10 +268,19 @@ const App = () => {
             />
             <Route
               path={PATH.default}
-              component={() => <GeneralBlock isOpen={isOpen} />}
+              component={() => (
+                <GeneralBlock
+                  refFeatures={refFeatures}
+                  refPricing={refPricing}
+                  refAbout={refAbout}
+                  isOpen={isOpen}
+                />
+              )}
             />
           </Switch>
-          {isProfile ? null : <Footer isOpen={isOpen} />}
+          {isProfile ? null : (
+            <Footer scrollInto={scrollInto} isOpen={isOpen} />
+          )}
         </MainWrapper>
       </Router>
     </MuiThemeProvider>

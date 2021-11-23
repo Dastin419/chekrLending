@@ -6,13 +6,13 @@ import Button from "../Button";
 import PeopleIcon from "../../Images/peopleIcon";
 import PeopleIconMobil from "../../Images/peopleIconMobile";
 
-const SubscribeBlock = ({ classes }) => {
+const SubscribeBlock = ({ classes, refPricing }) => {
   return (
-    <div className={classes.wrapper}>
+    <div ref={refPricing} className={classes.wrapper}>
       <div className={classes.title}>
         <span className={classes.blue}>Subscribe</span> for just $9.99 per month
-        <br className={classes.br} />
-        or $4.99 only by invite 5 friends
+        {/*<br className={classes.br} />*/}
+        {/*or $4.99 only by invite 5 friends*/}
       </div>
       <div className={classes.text}>
         Test the effectiveness of the instrument personally and increase the
@@ -20,7 +20,7 @@ const SubscribeBlock = ({ classes }) => {
       </div>
       <div className={classes.buttonsWrap}>
         <Button color="blueOutlined" label="Subscribe" margin={10} />
-        <Button color="blue" label="Invite" />
+        {/*<Button color="blue" label="Invite" />*/}
       </div>
       <PeopleIcon className={classes.icon} />
       <PeopleIconMobil className={classes.iconMobil} />

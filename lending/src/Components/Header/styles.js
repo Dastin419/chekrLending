@@ -30,13 +30,10 @@ const styles = {
     justifyContent: "space-between",
     display: "flex",
     width: "100%",
-    "@media (max-width: 1200px)": {
-      marginLeft: 30
-    },
     "@media (max-width: 1000px)": {
-      marginLeft: 10
+      marginLeft: 20
     },
-    "@media (max-width: 646px)": {
+    "@media (max-width: 565px)": {
       display: "none"
     }
   },
@@ -45,15 +42,12 @@ const styles = {
     fontSize: 18,
     color: "#FFFFFF",
     whiteSpace: "nowrap",
-    "@media (max-width: 1100px)": {
+    "@media (max-width: 950px)": {
       marginRight: 15
-    },
-    "@media (max-width: 1000px)": {
-      marginRight: 10
     }
   },
   burgerMenu: {
-    "@media (min-width: 646px)": {
+    "@media (min-width: 565px)": {
       display: "none"
     }
   },
@@ -69,7 +63,7 @@ const styles = {
     }
   },
   accordion: {
-    "@media (min-width: 646px)": {
+    "@media (min-width: 565px)": {
       display: "none"
     },
     "& div": {},

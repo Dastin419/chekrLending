@@ -4,9 +4,9 @@ import { styles } from "./styles";
 import ChipIcon from "../../Images/chipIcon";
 import Button from "../Button";
 
-const ChipBlock = ({ classes }) => {
+const ChipBlock = ({ classes, refFeatures }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} ref={refFeatures}>
       <div className={classes.preTitle}>artificial intelligence</div>
       <div className={classes.title}>
         Runs on proprietary <br />

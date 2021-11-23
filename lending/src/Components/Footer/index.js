@@ -8,7 +8,7 @@ import FacebookIcon from "../../Images/facebook";
 import TwitterIcon from "../../Images/twiter";
 import LinkendinIcon from "../../Images/linkendin";
 
-const Footer = ({ classes, isOpen }) => {
+const Footer = ({ classes, isOpen, scrollInto }) => {
   return (
     <div
       style={isOpen ? { background: "rgba(0,0,0,0.5" } : {}}
@@ -20,9 +20,24 @@ const Footer = ({ classes, isOpen }) => {
           <LogoIcon fill="#2489F5" />
         </div>
         <div className={classes.textWrapper}>
-          <div className={classNames(classes.link, {})}>About</div>
-          <div className={classNames(classes.link, {})}>User's stories</div>
-          <div className={classNames(classes.link, {})}>Updates</div>
+          <div
+            onClick={() => scrollInto("Features")}
+            className={classNames(classes.link, {})}
+          >
+            Features
+          </div>
+          <div
+            onClick={() => scrollInto("Pricing")}
+            className={classNames(classes.link, {})}
+          >
+            Pricing
+          </div>
+          <div
+            onClick={() => scrollInto("About")}
+            className={classNames(classes.link, {})}
+          >
+            About
+          </div>
           <div />
         </div>
         <div className={classes.rightBlock}>

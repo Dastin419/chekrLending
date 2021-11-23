@@ -20,7 +20,13 @@ import ChipBlock from "../ChipBlock";
 import SubscribeBlock from "../SubscribeBlock";
 import AboutUsBlock from "../AboutUsBlock";
 
-const GeneralBlock = ({ classes, isOpen }) => {
+const GeneralBlock = ({
+  classes,
+  isOpen,
+  refFeatures,
+  refPricing,
+  refAbout
+}) => {
   return (
     <div
       className={classes.wrapper}
@@ -53,7 +59,7 @@ const GeneralBlock = ({ classes, isOpen }) => {
         bgIcon={<Bg7Icon className={classes.bg6} />}
         reverse={true}
       />
-      <ChipBlock />
+      <ChipBlock refFeatures={refFeatures} />
       <SimpleBlock
         title="Allows live editing and instant feedback on changes"
         text="You can at any time make changes to your essay right in the program and check how your score has changed"
@@ -67,8 +73,8 @@ const GeneralBlock = ({ classes, isOpen }) => {
         icon={<SummaryIcon />}
         bgIcon={<Bg6Icon className={classes.bg5} />}
       />
-      <SubscribeBlock />
-      <AboutUsBlock />
+      <SubscribeBlock refPricing={refPricing} />
+      <AboutUsBlock refAbout={refAbout} />
     </div>
   );
 };

@@ -21,7 +21,8 @@ const Header = ({
   setIsProfile,
   setIsOpenModalLogin,
   setIsOpenModalCreateAccount,
-  handleLogOut
+  handleLogOut,
+  scrollInto
 }) => {
   return (
     <div
@@ -46,9 +47,24 @@ const Header = ({
         <div className={classes.secondWrap}>
           {isProfile ? null : (
             <div className={classes.textWrapper}>
-              <div className={classNames(classes.link)}>About</div>
-              <div className={classNames(classes.link)}>User's stories</div>
-              <div className={classNames(classes.link)}>Updates</div>
+              <div
+                onClick={() => scrollInto("Features")}
+                className={classNames(classes.link)}
+              >
+                Features
+              </div>
+              <div
+                onClick={() => scrollInto("Pricing")}
+                className={classNames(classes.link)}
+              >
+                Pricing
+              </div>
+              <div
+                onClick={() => scrollInto("About")}
+                className={classNames(classes.link)}
+              >
+                About
+              </div>
             </div>
           )}
           <div className={classes.buttonWrapper}>
@@ -141,9 +157,15 @@ const Header = ({
               Log out
             </div>
           )}
-          <div className={classes.linkM}>About</div>
-          <div className={classes.linkM}>User`s stories</div>
-          <div className={classes.linkM}>Updates</div>
+          <div onClick={() => scrollInto("Features")} className={classes.linkM}>
+            Features
+          </div>
+          <div onClick={() => scrollInto("Pricing")} className={classes.linkM}>
+            Pricing
+          </div>
+          <div onClick={() => scrollInto("About")} className={classes.linkM}>
+            About
+          </div>
         </AccordionDetails>
       </Accordion>
     </div>

@@ -39,9 +39,9 @@ const PersonItem = ({ classes, name, job, img }) => {
   );
 };
 
-const AboutUsBlock = ({ classes }) => {
+const AboutUsBlock = ({ classes, refAbout }) => {
   return (
-    <div className={classes.wrapper}>
+    <div ref={refAbout} className={classes.wrapper}>
       <div className={classes.subWrapper}>
         <div className={classes.peopleBlock}>
           <div className={classes.preTitle}>OUR VISION</div>
